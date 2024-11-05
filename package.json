@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "- read\r - create",
   "dependencies": {
     "express": "^4.21.1",
     "node": "^22.11.0"

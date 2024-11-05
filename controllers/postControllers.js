@@ -1,3 +1,4 @@
+const { title } = require('process')
 const posts = require('../db/db.js')
 
 const show = (req, res) => {
@@ -30,4 +31,15 @@ const index = (req, res) => {
     res.send(html)
 }
 
-module.exports = { show, index }
+const store = (req, res) => {
+    console.log(req.body);
+    const post = {
+        title: req.body.title,
+        slug: req.body.slug,
+        content: req.body.content,
+        image: req.body.image,
+        tags: req.body.tags
+    }
+   
+}
+module.exports = { show, index, store }
