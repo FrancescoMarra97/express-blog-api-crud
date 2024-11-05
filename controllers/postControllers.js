@@ -1,5 +1,6 @@
 const { title } = require('process')
 const posts = require('../db/db.js')
+const fs = require('fs')
 
 const show = (req, res) => {
     const slug = req.params.slug
