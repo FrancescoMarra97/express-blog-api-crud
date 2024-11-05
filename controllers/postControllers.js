@@ -42,7 +42,7 @@ const store = (req, res) => {
         tags: req.body.tags
     }
     posts.push(post)
-    fs.writeFileSync('./db/menu.js', `module.exports = ${JSON.stringify(menu, null, 4)}`)
+    fs.writeFileSync('./db/menu.js', `module.exports = ${JSON.stringify(posts, null, 4)}`)
     return res.status(201).json({
         status: 201,
         data: posts,
