@@ -40,6 +40,7 @@ const store = (req, res) => {
         image: req.body.image,
         tags: req.body.tags
     }
+    posts.push(post)
    
 }
 module.exports = { show, index, store }
