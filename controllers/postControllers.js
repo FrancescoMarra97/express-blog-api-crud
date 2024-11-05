@@ -41,6 +41,10 @@ const store = (req, res) => {
         tags: req.body.tags
     }
     posts.push(post)
-   
+    return res.status(201).json({
+        status: 201,
+        data: posts,
+        count: posts.length
+      })
 }
 module.exports = { show, index, store }
