@@ -85,5 +85,9 @@ const destroy = (req, res) => {
     //update the file js
     fs.writeFileSync("./db/db.js", `module.exports = ${JSON.stringify(newPosts, null, 4)}`)
     //return the updated posts item
+    res.status(200).json({
+        status : 200,
+        data: posts
+    })
 }
 module.exports = { show, index, store, update, destroy }
