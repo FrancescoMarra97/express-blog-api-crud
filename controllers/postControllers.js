@@ -87,7 +87,7 @@ const destroy = (req, res) => {
     //return the updated posts item
     res.status(200).json({
         status : 200,
-        data: newPosts
+        data: newPosts,
         counter: newPosts.length
     })
 }
