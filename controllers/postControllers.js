@@ -58,8 +58,12 @@ const update =(req, res)=>{
     if (!post) {
         return res.status(404).json({ error: "no post found with that slug"   })
     }
-    //upodate the post's object
-
+    //update the post's object
+    post.title = req.body.title;
+    post.slug = req.body.slug;
+    post.content = req.body.content;
+    post.image = req.body.image;
+    post.tags = req.body.tags;
     //update the file js
 
     //return the updated posts item
