@@ -1,6 +1,7 @@
 const { title } = require('process')
 const posts = require('../db/db.js')
 const fs = require('fs')
+const { post } = require('../routes/posts.js')
 
 const show = (req, res) => {
     const slug = req.params.slug
@@ -48,7 +49,17 @@ const store = (req, res) => {
         data: posts,
         count: posts.length
       })
-    
-
 }
-module.exports = { show, index, store }
+
+const update =(req, res)=>{
+    //find the post by slug
+    const post = posts.find((post)=> post.slug === req.params.slug);
+    //check if the user is updating the correct post
+
+    //upodate the post's object
+
+    //update the file js
+
+    //return the updated posts item
+}
+module.exports = { show, index, store, update }
