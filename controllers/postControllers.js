@@ -81,7 +81,7 @@ const destroy = (req, res) => {
         return res.status(404).json({ error: "no post found with that slug" })
     }
     //remove the post from the posts
-    const newPosts = post.filter((post) => post.slug !== req.params.slug);
+    const newPosts = posts.filter((post) => post.slug !== req.params.slug);
     //update the file js
     fs.writeFileSync("./db/db.js", `module.exports = ${JSON.stringify(newPosts, null, 4)}`)
     //return the updated posts item

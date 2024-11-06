@@ -33,18 +33,6 @@ module.exports = [
         ]
     },
     {
-        "title": "Pane fritto dolce 2",
-        "slug": "pane-fritto-dolce",
-        "content": "pane dolce",
-        "image": "pane_fritto_dolce.jpeg",
-        "tags": [
-            "Dolci",
-            "Dolci veloci",
-            "Ricette veloci",
-            "Ricette vegetariane"
-        ]
-    },
-    {
         "title": "Torta paesana",
         "slug": "torta-paesana",
         "content": "La torta paesana è un dolce di origine lombarda e precisamente della Brianza, la zona compresa tra la provincia a nord di Milano e il lago di Lecco-Como. E’ un dolce di origine contadina, dalle infinite varianti, ma realizzata principalmente con pane raffermo bagnato nel latte. E’ infatti conosciuta anche come torta di pane o, in dialetto locale, “michelacc” ovvero mica e lac (pane e latte). A seconda dei gusti e delle disponibilità del momento, al pane ammollato ogni famiglia univa ingredienti diversi, chi l’uvetta o chi i pinoli ad esempio. Noi vi presentiamo la nostra versione con l’aggiunta di cacao e amaretti: perfetta da gustare per una merenda dal sapore rustico, la torta paesana è un perfetto dolce di recupero quando si ha del pane avanzato… ed è ancora più buona il giorno dopo!",
@@ -55,18 +43,6 @@ module.exports = [
             "Torte",
             "Ricette vegetariane",
             "Ricette al forno"
-        ]
-    },
-    {
-        "title": "Pane fritto dolce 2",
-        "slug": "pane-fritto-dolce",
-        "content": "pane dolce",
-        "image": "pane_fritto_dolce.jpeg",
-        "tags": [
-            "Dolci",
-            "Dolci veloci",
-            "Ricette veloci",
-            "Ricette vegetariane"
         ]
     }
 ]
