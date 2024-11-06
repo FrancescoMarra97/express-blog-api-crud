@@ -80,10 +80,10 @@ const destroy = (req, res) => {
     if (!post) {
         return res.status(404).json({ error: "no post found with that slug" })
     }
-    //removve the post from the posts
-
+    //remove the post from the posts
+    const newPosts = post.filter((post) => post.slug !== req.params.slug);
     //update the file js
-
+    fs.writeFileSync("./db/db.js", `module.exports = ${JSON.stringify(newPosts, null, 4)}`)
     //return the updated posts item
 }
 module.exports = { show, index, store, update, destroy }
