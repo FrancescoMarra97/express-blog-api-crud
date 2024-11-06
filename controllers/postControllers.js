@@ -68,8 +68,20 @@ const update = (req, res) => {
     fs.writeFileSync("./db/db.js", `module.exports = ${JSON.stringify(posts, null, 4)}`)
     //return the updated posts item
     res.status(200).json({
-        status : 200,
+        status: 200,
         data: posts
     })
 }
-module.exports = { show, index, store, update }
+
+const destroy = (req, res) => {
+    //find the post by slug
+    
+    //check if the user is updating the correct post
+
+    //removve the post from the posts
+
+    //update the file js
+
+    //return the updated posts item
+}
+module.exports = { show, index, store, update, destroy }
