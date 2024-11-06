@@ -48,5 +48,7 @@ const store = (req, res) => {
         data: posts,
         count: posts.length
       })
+    
+
 }
 module.exports = { show, index, store }
