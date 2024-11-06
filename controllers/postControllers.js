@@ -67,6 +67,9 @@ const update = (req, res) => {
     //update the file js
     fs.writeFileSync("./db/db.js", `module.exports = ${JSON.stringify(posts, null, 4)}`)
     //return the updated posts item
-    return 
+    res.status(200).json({
+        status : 200,
+        data: posts
+    })
 }
 module.exports = { show, index, store, update }
