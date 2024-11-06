@@ -48,15 +48,15 @@ const store = (req, res) => {
         status: 201,
         data: posts,
         count: posts.length
-      })
+    })
 }
 
-const update =(req, res)=>{
+const update = (req, res) => {
     //find the post by slug
-    const post = posts.find((post)=> post.slug === req.params.slug);
+    const post = posts.find((post) => post.slug === req.params.slug);
     //check if the user is updating the correct post
     if (!post) {
-        return res.status(404).json({ error: "no post found with that slug"   })
+        return res.status(404).json({ error: "no post found with that slug" })
     }
     //update the post's object
     post.title = req.body.title;
@@ -65,7 +65,8 @@ const update =(req, res)=>{
     post.image = req.body.image;
     post.tags = req.body.tags;
     //update the file js
-
+    fs.writeFileSync("./db/db.js", `module.exports = ${JSON.stringify(posts, null, 4)}`)
     //return the updated posts item
+    return 
 }
 module.exports = { show, index, store, update }
