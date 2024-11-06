@@ -75,7 +75,7 @@ const update = (req, res) => {
 
 const destroy = (req, res) => {
     //find the post by slug
-    
+    const post = posts.find((post) => post.slug === req.params.slug);
     //check if the user is updating the correct post
 
     //removve the post from the posts
