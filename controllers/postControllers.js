@@ -87,7 +87,8 @@ const destroy = (req, res) => {
     //return the updated posts item
     res.status(200).json({
         status : 200,
-        data: posts
+        data: newPosts
+        counter: newPosts.length
     })
 }
 module.exports = { show, index, store, update, destroy }
