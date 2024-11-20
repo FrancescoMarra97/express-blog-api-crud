@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "- read\r - create",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1",
     "node": "^22.11.0"
   }

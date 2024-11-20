@@ -30,7 +30,8 @@ const index = (req, res) => {
 		`
     })
     html += '</ul>'
-    res.send(html)
+    //res.send(html)
+    res.json(posts)
 }
 
 const store = (req, res) => {
@@ -86,7 +87,7 @@ const destroy = (req, res) => {
     fs.writeFileSync("./db/db.js", `module.exports = ${JSON.stringify(newPosts, null, 4)}`)
     //return the updated posts item
     res.status(200).json({
-        status : 200,
+        status: 200,
         data: newPosts,
         counter: newPosts.length
     })
